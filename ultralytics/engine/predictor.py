@@ -140,7 +140,7 @@ class BasePredictor:
             if self.args.visualize and (not self.source_type.tensor)
             else False
         )
-        return self.model(im, augment=self.args.augment, visualize=visualize, embed=self.args.embed, *args, **kwargs)
+        return self.model(im, augment=self.args.augment, visualize=visualize, *args, **kwargs)
 
     def pre_transform(self, im):
         """
